@@ -1,0 +1,21 @@
+.app {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+.calc-wrapper {
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  width: 500px;
+  text-align: center;
+  height: auto;  
+  border-radius: 20px;  
+  border: 10px outset #282c34;
+}
+
+.linha {
+  display: flex;
+}
