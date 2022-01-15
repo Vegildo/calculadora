@@ -12,6 +12,14 @@ const App = () => {
     setInput (input + val);
   }
 
+  const inserirSimb = val => {
+    if (input === '') {
+      setInput (0 + val);
+    } else {
+      setInput (input + val);
+    }
+  }
+
   return (
     <div className="App">
       <h1>Calculadora do VV</h1>
@@ -22,25 +30,25 @@ const App = () => {
             <Botao onClick={inserirNum}>7</Botao>
             <Botao onClick={inserirNum}>8</Botao>
             <Botao onClick={inserirNum}>9</Botao>
-            <Operador>/</Operador>
+            <Operador onClick={inserirSimb}>/</Operador>
           </div>
           <div className="linha">
             <Botao onClick={inserirNum}>4</Botao>
             <Botao onClick={inserirNum}>5</Botao>
             <Botao onClick={inserirNum}>6</Botao>
-            <Operador>*</Operador>
+            <Operador onClick={inserirSimb}>*</Operador>
           </div>
           <div className="linha">
             <Botao onClick={inserirNum}>1</Botao>
             <Botao onClick={inserirNum}>2</Botao>
             <Botao onClick={inserirNum}>3</Botao>
-            <Operador>+</Operador>
+            <Operador onClick={inserirSimb}>+</Operador>
           </div>
           <div className="linha">
-            <Botao onClick={inserirNum}>.</Botao>
+            <Botao onClick={inserirSimb}>.</Botao>
             <Botao onClick={inserirNum}>0</Botao>
             <Botao>c</Botao>
-            <Operador>-</Operador>
+            <Operador onClick={inserirSimb}>-</Operador>
           </div>
           <div className="linha">
             <BotaoIgual>=</BotaoIgual>
