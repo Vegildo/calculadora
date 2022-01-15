@@ -17,28 +17,28 @@ const App = () => {
       <h1>Calculadora do VV</h1>
       <div style={{ display: 'flex', justifyContent: 'center' }} >
         <div className="calc-wrapper">
-          <Display>{inserirNum}</Display>
+          <Display>{input}</Display>
           <div className="linha">
-            <Botao>7</Botao>
-            <Botao>8</Botao>
-            <Botao>9</Botao>
+            <Botao onClick={inserirNum}>7</Botao>
+            <Botao onClick={inserirNum}>8</Botao>
+            <Botao onClick={inserirNum}>9</Botao>
             <Operador>/</Operador>
           </div>
           <div className="linha">
-            <Botao>4</Botao>
-            <Botao>5</Botao>
-            <Botao>6</Botao>
+            <Botao onClick={inserirNum}>4</Botao>
+            <Botao onClick={inserirNum}>5</Botao>
+            <Botao onClick={inserirNum}>6</Botao>
             <Operador>*</Operador>
           </div>
           <div className="linha">
-            <Botao>1</Botao>
-            <Botao>2</Botao>
-            <Botao>3</Botao>
+            <Botao onClick={inserirNum}>1</Botao>
+            <Botao onClick={inserirNum}>2</Botao>
+            <Botao onClick={inserirNum}>3</Botao>
             <Operador>+</Operador>
           </div>
           <div className="linha">
-            <Botao>.</Botao>
-            <Botao>0</Botao>
+            <Botao onClick={inserirNum}>.</Botao>
+            <Botao onClick={inserirNum}>0</Botao>
             <Botao>c</Botao>
             <Operador>-</Operador>
           </div>
