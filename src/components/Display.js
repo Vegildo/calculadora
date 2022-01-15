@@ -4,7 +4,7 @@ import "./components.css";
 const Display = ({children}) => {
     return (
         <div>
-            <div className="input">Display</div>
+            <div className="input">{children}</div>
         </div>
     );
 };

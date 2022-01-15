@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "./styles.css";
 import Botao from "./components/Botao";
 import BotaoIgual from "./components/BotaoIgual";
@@ -6,12 +6,18 @@ import Operador from "./components/Operador";
 import Display from "./components/Display";
 
 const App = () => {
+  const [input, setInput ] = useState('');
+
+  const inserirNum = (val) => {
+    setInput (input + val);
+  }
+
   return (
     <div className="App">
       <h1>Calculadora do VV</h1>
       <div style={{ display: 'flex', justifyContent: 'center' }} >
         <div className="calc-wrapper">
-          <Display />
+          <Display>{inserirNum}</Display>
           <div className="linha">
             <Botao>7</Botao>
             <Botao>8</Botao>
