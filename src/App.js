@@ -4,6 +4,9 @@ import Botao from "./components/Botao";
 import BotaoIgual from "./components/BotaoIgual";
 import Operador from "./components/Operador";
 import Display from "./components/Display";
+import * as math from "mathjs";
+
+
 
 const App = () => {
   const [input, setInput ] = useState('');
@@ -17,6 +20,18 @@ const App = () => {
       setInput (0 + val);
     } else {
       setInput (input + val);
+    }
+  }
+
+  const inserirReset = () => {
+    setInput ('');
+  }
+
+  const calcular = () => {
+    if (input === '') {
+      setInput ('Resposta é 0. Aprenda a usar a calculadora seu jumento')
+    } else {
+      setInput (math.evaluate(input));
     }
   }
 
@@ -47,11 +62,11 @@ const App = () => {
           <div className="linha">
             <Botao onClick={inserirSimb}>.</Botao>
             <Botao onClick={inserirNum}>0</Botao>
-            <Botao>c</Botao>
+            <Botao onClick={inserirReset}>c</Botao>
             <Operador onClick={inserirSimb}>-</Operador>
           </div>
           <div className="linha">
-            <BotaoIgual>=</BotaoIgual>
+            <BotaoIgual onClick={calcular}>=</BotaoIgual>
           </div>
         </div>
       </div>
