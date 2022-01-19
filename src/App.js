@@ -34,7 +34,6 @@ const App = () => {
       setInput (math.evaluate(input));
     }
   }
-
   return (
     <div className="App">
       <h1>Calculadora do VV</h1>
@@ -75,4 +74,3 @@ const App = () => {
 };
 
 export default App;
-
